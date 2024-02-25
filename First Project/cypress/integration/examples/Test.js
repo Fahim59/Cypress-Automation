@@ -1,7 +1,8 @@
-describe('Google Test', () => {
-    it('should open Google', () => {
-      // Visit Google's homepage
-      cy.visit('https://www.google.com');
-    });
+describe('My First Test Suite', () => {                        //Describe block defines a test suite
+
+  it('Should open Google', () => {                            //'it' block represents an individual test case
+
+    cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');
+
   });
-  
+});
