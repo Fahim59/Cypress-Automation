@@ -7,9 +7,9 @@ describe('My First Test Suite', () => {                        //Describe block 
       cy.log('Current URL is: ' +url)
     })
 
-    // cy.title().then((title) => {
-    //   cy.log('Current Title is: ' +title)
-    // })
+    cy.title().then((title) => {
+      cy.log('Current Title is: ' +title)
+    })
   });
 
 });
