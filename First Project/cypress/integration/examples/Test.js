@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 describe('My First Test Suite', () => {                        //Describe block defines a test suite
 
   it('Basic Tests', () => {                            //'it' block represents an individual test case
@@ -10,6 +12,8 @@ describe('My First Test Suite', () => {                        //Describe block 
     cy.title().then((title) => {
       cy.log('Current Title is: ' +title)
     })
+
+    cy.get('.search-keyword');
   });
 
 });
