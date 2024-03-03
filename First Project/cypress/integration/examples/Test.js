@@ -11,7 +11,18 @@ describe('My First Test Suite', () => {
     cy.get('.products').find('.product').should('have.length',4)  //parent-child chaining
 
     cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()  //eq is index no
+
+    //OR
+
+    cy.get('.products').find('.product').each(($element, index, $list) => {
+
+      const vegName = $element.find('h4.product-name').text()
+      
+      if (vegName.includes('Cashews')) {                       //$el is a wrapped jQuery element
+        cy.wrap($element).find('button').click()
+      }
+    })
+
   });
 
 });
-
