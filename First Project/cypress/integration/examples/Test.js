@@ -1,19 +1,12 @@
 /// <reference types="Cypress" />
 
-describe('My First Test Suite', () => {                        //Describe block defines a test suite
+describe('My First Test Suite', () => {
 
-  it('Basic Tests', () => {                            //'it' block represents an individual test case
-    cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/');
+  it('Basic Tests', () => {
+    cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
 
-    cy.url().then((url) => {
-      cy.log('Current URL is: ' +url)
-    })
-
-    cy.title().then((title) => {
-      cy.log('Current Title is: ' +title)
-    })
-
-    cy.get('.search-keyword');
+    cy.get('.search-keyword').type('ca')                                //get an element and enter text
+    //cy.get('.product:visible').should('have.length',4)  //added assertion, only visible elements will display
   });
 
 });
